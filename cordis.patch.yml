@@ -1,0 +1,8 @@
+# dsh-wifi-access plugin patch: registers the dual-face plugin row into the
+# web profile roster. The node half (exports ".") runs in the host process
+# (embedded reverse proxy on 3081, /wifi-access/api routes, model tool), and
+# the `dsh.client` declaration in package.json loads the browser half
+# (exports "./client") as the sidebar footer panel.
+- insert:
+    - id: dsh-wifi-access
+      name: 'dsh-wifi-access'

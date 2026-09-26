@@ -1,0 +1,58 @@
+{
+    "name": "dsh-wifi-access",
+    "version": "0.1.0",
+    "description": "DSH 移动端访问插件（手机/平板，WiFi 局域网/USB）：内置 WiFi 反代（0.0.0.0:3081 → 127.0.0.1:3080，Host/Origin 改写回 loopback，注入 crypto.randomUUID 与 Uint8Array 编解码 polyfill，裸导航 401 自动 302 换 token），左栏面板显示访问地址（可复制）与连接状态并一键启停，官方源码零改动。",
+    "type": "module",
+    "main": "lib/index.js",
+    "exports": {
+        ".": {
+            "default": "./lib/index.js"
+        },
+        "./client": {
+            "default": "./lib/client.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "dsh": {
+        "bundle": {
+            "patch": "./cordis.patch.yml"
+        },
+        "client": {
+            "inject": [
+                "@deepseek-ai/dsh-client-ui-sidebar"
+            ],
+            "platform": "web"
+        }
+    },
+    "peerDependencies": {
+        "@deepseek-ai/cordis": "^4.0.1",
+        "@deepseek-ai/dsh-tools": "^0.1.0-rc.6 || ^0.1.5-rc.2",
+        "react": "^18.2.0"
+    },
+    "files": [
+        "lib",
+        "cordis.patch.yml",
+        "README.md",
+        "LICENSE"
+    ],
+    "license": "MIT",
+    "keywords": [
+        "dsh",
+        "deepseek-harness",
+        "plugin",
+        "wifi",
+        "lan",
+        "proxy",
+        "mobile",
+        "remote-access"
+    ],
+    "author": "Ln1m (https://github.com/Ln1m)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ln1m/dsh-wifi-access.git"
+    },
+    "homepage": "https://github.com/Ln1m/dsh-wifi-access#readme",
+    "bugs": {
+        "url": "https://github.com/Ln1m/dsh-wifi-access/issues"
+    }
+}
