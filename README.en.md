@@ -26,14 +26,3 @@ Restart the web instance afterwards.
 
 - Since DSH 0.1.6 `dsh web` can only bind to 127.0.0.1, so LAN access must go through the 3081 reverse proxy
 - For a UI (address / QR code / start-stop / tunnel), install `dsh-pocket` as well
-
-## Slots reserved for LAN / public links
-
-This plugin has no UI now and does not occupy the two slots below. If you also run `dsh-vk-suite`, they are reserved for link-style plugins:
-
-| Reserved slot | Intended for |
-|---|---|
-| `vk.statusbar.left` | LAN links: local LAN access URLs, local service lists |
-| `vk.statusbar.right` | Public links: tunnels / reverse proxies / share URLs |
-
-Whoever implements it claims it, via `vkCard` — see the dsh-vk-suite README.

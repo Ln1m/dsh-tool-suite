@@ -26,14 +26,3 @@ dsh plugin --profile web add file:<本仓库>
 
 - DSH 0.1.6 起 `dsh web` 只能绑 127.0.0.1，局域网访问必须经 3081 反代
 - 想要界面（地址 / 二维码 / 启停 / 隧道）另装 `dsh-pocket`
-
-## 给局域网 / 公网链接留的位置
-
-本插件现在没有界面，不占下面这两个位。若你同时装了 `dsh-vk-suite`，那两个位是留着给链接类插件的：
-
-| 预留位 | 用途 |
-|---|---|
-| `vk.statusbar.left` | 局域网链接：本机 LAN 访问地址、局域网服务清单 |
-| `vk.statusbar.right` | 公网链接：隧道 / 反代 / 分享地址 |
-
-谁实现谁填，用 `vkCard` 占位，见 dsh-vk-suite 的 README。
