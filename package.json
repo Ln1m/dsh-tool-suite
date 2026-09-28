@@ -1,7 +1,7 @@
 {
     "name": "dsh-wifi-access",
     "version": "0.1.0",
-    "description": "DSH 移动端访问插件（手机/平板，WiFi 局域网/USB）：内置 WiFi 反代（0.0.0.0:3081 → 127.0.0.1:3080，Host/Origin 改写回 loopback，注入 crypto.randomUUID 与 Uint8Array 编解码 polyfill，裸导航 401 自动 302 换 token），左栏面板显示访问地址（可复制）与连接状态并一键启停，官方源码零改动。",
+    "description": "HOST 侧移动端访问兜底（DSH 插件）：内置 WiFi 反代 0.0.0.0:3081 → 127.0.0.1:3080，Host/Origin 改写回 loopback，裸导航 401 自动 302 换 token；与 dsh-pocket 互为热备（每 20s 复探，对方掉线就自己接管），另提供华为 ArkWeb 缺口的移动端浏览器垫片，以及 /wifi-access/api/{status,start,stop,qr,client-caps} 路由与 query_wifi_access 工具。界面（地址/复制/二维码/启停/隧道）由 dsh-pocket 提供，本插件不画界面。",
     "type": "module",
     "main": "lib/index.js",
     "exports": {
@@ -19,14 +19,16 @@
         },
         "client": {
             "inject": [
-                "@deepseek-ai/dsh-client-ui-sidebar"
+                "@deepseek-ai/dsh-client-runtime",
+                "@deepseek-ai/dsh-client-ui-sidebar",
+                "@deepseek-ai/dsh-client-ui-primitives"
             ],
             "platform": "web"
         }
     },
     "peerDependencies": {
         "@deepseek-ai/cordis": "^4.0.1",
-        "@deepseek-ai/dsh-tools": "^0.1.0-rc.6 || ^0.1.5-rc.2",
+        "@deepseek-ai/dsh-tools": "^0.1.0-rc.6",
         "react": "^18.2.0"
     },
     "files": [
