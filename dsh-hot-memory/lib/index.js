@@ -67,8 +67,7 @@ export function apply(ctx) {
   // `ctx.inject` waits for the service instead of racing plugin load order:
   // `ctx.get("systemPrompt")` returns undefined while the service is not mounted yet,
   // which would drop this section silently and make the whole plugin a no-op that
-  // only shows up after wasting a restart. Same form dsh-host-files uses for its
-  // `user:global-persona` section.
+  // only shows up after wasting a restart.
   ctx.inject(["systemPrompt"], (promptCtx) => {
     promptCtx.systemPrompt.section({
       name: SECTION_NAME,
