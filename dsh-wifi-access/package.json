@@ -50,10 +50,11 @@
     "author": "Ln1m (https://github.com/Ln1m)",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Ln1m/dsh-tool-wifi-access.git"
+        "url": "git+https://github.com/Ln1m/dsh-tool-suite.git",
+        "directory": "dsh-wifi-access"
     },
-    "homepage": "https://github.com/Ln1m/dsh-tool-wifi-access#readme",
+    "homepage": "https://github.com/Ln1m/dsh-tool-suite/tree/main/dsh-wifi-access#readme",
     "bugs": {
-        "url": "https://github.com/Ln1m/dsh-tool-wifi-access/issues"
+        "url": "https://github.com/Ln1m/dsh-tool-suite/issues"
     }
 }
