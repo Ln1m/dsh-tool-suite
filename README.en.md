@@ -1,5 +1,8 @@
 # dsh-wifi-access
 
+> **The vk build only**: position — claims no UI position: the 3081 reverse proxy (host half; the UI comes from third-party `dsh-pocket`); install the [dsh-vk-suite](https://github.com/Ln1m/dsh-vk-suite) contract + skeleton first.
+> Conflicts: a slot renders only its highest-priority entry, and two registrations at the same priority throw; mutually exclusive with anything claiming the same position (see "How to use it / what it conflicts with" in [dsh-vk-suite](https://github.com/Ln1m/dsh-vk-suite)).
+
 [中文](README.md) · English
 
 The host-side implementation and standby for reaching your local DSH from a phone or tablet. **This plugin has no UI**: the "Mobile access" card in the Extensions tab (address / copy / QR code / LAN toggle / public tunnel) has been provided by `dsh-pocket` since 2026-09-25, because the two duplicated each other. This plugin keeps its host-side capabilities; it can coexist with dsh-pocket, or stand alone as a 3081 reverse-proxy fallback.

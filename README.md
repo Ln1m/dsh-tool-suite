@@ -1,5 +1,8 @@
 # dsh-wifi-access
 
+> 本仓**只有 vk 版**：位置 —— 不占界面位置：3081 反代（host 半，界面由第三方 `dsh-pocket` 提供），需先装 [dsh-vk-suite](https://github.com/Ln1m/dsh-vk-suite) 契约 + 骨架。
+> 冲突：一个槽位只渲染优先级最高的一条，同优先级重复注册会直接抛错；与占同一位置的插件互斥（详见 [dsh-vk-suite](https://github.com/Ln1m/dsh-vk-suite) 的「推荐怎么用 / 会跟谁冲突」）。
+
 [English](README.en.md) · 中文
 
 手机 / 平板访问本机 DSH 的 host 侧实现与热备。**本插件不提供界面**：功能栏那张「移动端访问」卡片（地址 / 复制 / 二维码 / 局域网开关 / 公网隧道）自 2026-09-25 起因功能重复改由 `dsh-pocket` 提供；本插件保留 host 侧能力，可与它共存，也可单独当 3081 反代的兜底。
