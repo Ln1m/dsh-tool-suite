@@ -1,0 +1,6 @@
+# dsh-hot-memory plugin patch: registers this host-only row into the web profile
+# roster. The node half (exports ".") runs in the host process and registers one
+# lazy `systemPrompt` section carrying ~/.mnemon/runtime/{USER,MEMORY}.md.
+- insert:
+    - id: dsh-hot-memory
+      name: 'dsh-hot-memory'

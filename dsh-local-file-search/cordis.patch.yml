@@ -1,0 +1,6 @@
+# dsh-local-file-search plugin patch: 把双面插件行插入 web profile roster。
+# Node 半端（exports "."）跑在 Host 进程：注册 /localfiles/api/* 路由，执行全机一次性搜索；
+# package.json 里的 dsh.client 声明让浏览器半端（exports "./client"）注册 @ 触发源。
+- insert:
+    - id: dsh-local-file-search
+      name: 'dsh-local-file-search'

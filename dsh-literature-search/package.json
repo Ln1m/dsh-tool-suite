@@ -1,0 +1,44 @@
+{
+    "name": "dsh-literature-search",
+    "description": "Model-callable literature_search tool for DeepSeek Harness: wraps the paper-search.py script (path from env DSH_PAPER_SEARCH_SCRIPT, default ~/Research-Tools/paper-search.py; OpenAlex cited-sort + arXiv relevance) so the agent searches literature with one structured tool call instead of reading a skill body and running a shell command.",
+    "version": "0.1.0",
+    "private": false,
+    "type": "module",
+    "main": "lib/index.js",
+    "exports": {
+        ".": "./lib/index.js",
+        "./package.json": "./package.json",
+        "./cordis.patch.yml": "./cordis.patch.yml"
+    },
+    "files": [
+        "lib",
+        "cordis.patch.yml"
+    ],
+    "license": "MIT",
+    "keywords": [
+        "dsh",
+        "deepseek-harness",
+        "plugin",
+        "tool",
+        "literature-search"
+    ],
+    "peerDependencies": {
+        "@deepseek-ai/cordis": "^4.0.1",
+        "@deepseek-ai/dsh-tools": "^0.1.0-rc.6"
+    },
+    "dsh": {
+        "bundle": {
+            "patch": "./cordis.patch.yml"
+        }
+    },
+    "author": "Ln1m (https://github.com/Ln1m)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ln1m/dsh-tool-suite.git",
+        "directory": "dsh-literature-search"
+    },
+    "homepage": "https://github.com/Ln1m/dsh-tool-suite/tree/main/dsh-literature-search#readme",
+    "bugs": {
+        "url": "https://github.com/Ln1m/dsh-tool-suite/issues"
+    }
+}
