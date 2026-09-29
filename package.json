@@ -53,8 +53,8 @@
         "type": "git",
         "url": "git+https://github.com/Ln1m/dsh-wifi-access.git"
     },
-    "homepage": "https://github.com/Ln1m/dsh-wifi-access#readme",
+    "homepage": "https://github.com/Ln1m/dsh-tool-wifi-access#readme",
     "bugs": {
-        "url": "https://github.com/Ln1m/dsh-wifi-access/issues"
+        "url": "https://github.com/Ln1m/dsh-tool-wifi-access/issues"
     }
 }
