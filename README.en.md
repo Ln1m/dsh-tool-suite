@@ -30,10 +30,12 @@ Install straight from the release, no clone needed:
 
 ```sh
 dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.0/dsh-wifi-access-0.1.0.tgz"
-dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.0/dsh-literature-search-0.1.0.tgz"
+dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.0/dsh-tool-literature-0.1.0.tgz"
 dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.0/dsh-local-file-search-0.1.0.tgz"
 dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.0/dsh-hot-memory-0.1.0.tgz"
 ```
+
+If the install fails with `UNABLE_TO_VERIFY_LEAF_SIGNATURE` (a TLS-intercepting proxy; Node does not read the system CA store by default), run `$env:NODE_OPTIONS='--use-system-ca'` first.
 
 Restart the web instance afterwards. Each package directory carries its own README.
 
