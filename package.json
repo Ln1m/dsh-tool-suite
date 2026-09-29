@@ -19,7 +19,6 @@
         },
         "client": {
             "inject": [
-                "@deepseek-ai/dsh-client-runtime",
                 "@deepseek-ai/dsh-client-ui-sidebar",
                 "@deepseek-ai/dsh-client-ui-primitives"
             ],
@@ -51,7 +50,7 @@
     "author": "Ln1m (https://github.com/Ln1m)",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Ln1m/dsh-wifi-access.git"
+        "url": "git+https://github.com/Ln1m/dsh-tool-wifi-access.git"
     },
     "homepage": "https://github.com/Ln1m/dsh-tool-wifi-access#readme",
     "bugs": {
