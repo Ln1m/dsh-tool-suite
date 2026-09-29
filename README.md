@@ -26,6 +26,15 @@ dsh plugin --profile web add file:<本仓库>/dsh-wifi-access
 ./install.ps1
 ```
 
+不克隆仓库、直接从 Release 装（一行一个包）：
+
+```sh
+dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.0/dsh-wifi-access-0.1.0.tgz"
+dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.0/dsh-literature-search-0.1.0.tgz"
+dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.0/dsh-local-file-search-0.1.0.tgz"
+dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.0/dsh-hot-memory-0.1.0.tgz"
+```
+
 装完重启 web 实例。每个包目录里还有它自己的 README。
 
 ## 界面
