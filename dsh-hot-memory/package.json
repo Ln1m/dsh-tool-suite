@@ -1,6 +1,6 @@
 {
     "name": "dsh-hot-memory",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "Project the Mnemon runtime memory files (USER.md / MEMORY.md) into every session's system prompt as one lazy section, independent of dsh-mnemon's lifecycle gate.",
     "type": "module",
     "main": "lib/index.js",

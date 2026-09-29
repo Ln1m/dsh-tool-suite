@@ -1,4 +1,4 @@
 # dsh-literature-search bundle patch: register the literature_search tool.
 - insert:
     - id: dsh-literature-search
-      name: 'dsh-tool-literature'
+      name: 'dsh-literature-search'

@@ -1,7 +1,7 @@
 {
     "name": "dsh-tool-literature",
     "description": "Model-callable literature_search tool for DeepSeek Harness: wraps the paper-search.py script (path from env DSH_PAPER_SEARCH_SCRIPT, default ~/Research-Tools/paper-search.py; OpenAlex cited-sort + arXiv relevance) so the agent searches literature with one structured tool call instead of reading a skill body and running a shell command.",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "private": false,
     "type": "module",
     "main": "lib/index.js",
