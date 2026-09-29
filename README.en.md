@@ -5,7 +5,9 @@
 
 [中文](README.md) · English
 
-The host-side implementation and standby for reaching your local DSH from a phone or tablet. **This plugin has no UI**: the "Mobile access" card in the Extensions tab (address / copy / QR code / LAN toggle / public tunnel) has been provided by `dsh-pocket` since 2026-09-25, because the two duplicated each other. This plugin keeps its host-side capabilities; it can coexist with dsh-pocket, or stand alone as a 3081 reverse-proxy fallback.
+The host-side implementation and standby for reaching your local DSH from a phone or tablet. **This plugin has no UI**: the "Mobile access" card in the Extensions tab (address / copy / QR code / LAN toggle / public tunnel) has been provided by `dsh-pocket` since 2026-09-25, because the two duplicated each other. This plugin keeps its host-side capabilities (it takes over 3081 when the other side drops).
+
+**One rule for installation: install exactly one mobile access.** Prefer the password-protected third-party [`dsh-pocket`](https://github.com/shaobeichen/dsh-pocket) (at the cost of installing someone else's plugin); without it, install this one only (self-made, LAN reachable, zero third-party dependencies). Installing both makes them fight over port 3081.
 
 Three things it provides that dsh-pocket does not:
 
