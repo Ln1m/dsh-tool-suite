@@ -1,6 +1,6 @@
 // dsh-literature-search: a model-callable literature_search tool.
 //
-// Wraps the local `D:\Research-Tools\paper-search.py` (OpenAlex cited-count
+// Wraps the local paper-search.py (env DSH_PAPER_SEARCH_SCRIPT, default ~/Research-Tools/paper-search.py; OpenAlex cited-count
 // sort + arXiv relevance) so literature search is one structured tool call
 // instead of "read the literature-search skill body, then run a shell command".
 // @module dsh-literature-search
@@ -17,13 +17,13 @@ const name = 'dsh-literature-search'
 const inject = ['tools']
 
 /** Absolute path to paper-search.py (the tool backend). */
-const PAPER_SEARCH_SCRIPT = 'D:\\Research-Tools\\paper-search.py'
+const PAPER_SEARCH_SCRIPT = process.env.DSH_PAPER_SEARCH_SCRIPT || join(homedir(), 'Research-Tools', 'paper-search.py')
 
 /** Run the local literature-search script and return its markdown output. */
 async function runPaperSearch(query, limit) {
   const n = Math.max(1, Math.min(50, Number.isInteger(limit) ? limit : 10))
   if (!existsSync(PAPER_SEARCH_SCRIPT)) {
-    return `文献检索脚本不存在：${PAPER_SEARCH_SCRIPT}。请确认 paper-search.py 仍在 D:\\Research-Tools 目录（详见 literature-search 技能 §1 兜底方案）。`
+    return `文献检索脚本不存在：${PAPER_SEARCH_SCRIPT}。请确认 paper-search.py 存在，或用环境变量 DSH_PAPER_SEARCH_SCRIPT 指定路径（详见 literature-search 技能 §1 兜底方案）。`
   }
   try {
     const { stdout } = await execFileAsync('python', [PAPER_SEARCH_SCRIPT, query, String(n)], {

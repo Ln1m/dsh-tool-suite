@@ -39,7 +39,7 @@ dsh plugin --profile web add file:<本仓库>/dsh-wifi-access
 
 ```sh
 dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.3/dsh-wifi-access-0.1.0.tgz"
-dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.3/dsh-tool-literature-0.1.2.tgz"
+dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.3/dsh-tool-literature-0.1.3.tgz"
 dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.3/dsh-local-file-search-0.1.2.tgz"
 dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.3/dsh-hot-memory-0.1.3.tgz"
 dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.3/dsh-guard-0.1.0.tgz"
