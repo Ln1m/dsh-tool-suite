@@ -5,15 +5,26 @@
  *   Project the Mnemon runtime memory files (USER.md / MEMORY.md) into the system
  *   prompt of every session, as a single lazy `systemPrompt` section.
  *
- * WHY THIS EXISTS
+ * WHY THIS EXISTED
  *   dsh-mnemon renders the same content through `agent/pre-step` ->
  *   `memorySnapshotMessage()`, but that whole tail sits BEHIND its
- *   `lifecycleEnabled` gate, which this machine keeps off so the idle review stops
+ *   `lifecycleEnabled` gate, which this machine kept off so the idle review stopped
  *   forking whole conversations. Measured 2026-09-24 (session-1f2a0e9b): the static
- *   `mnemon:runtime-memory-protocol` text is present while the runtime-memory
- *   snapshot is absent, so USER.md / MEMORY.md never reach the model at all.
- *   This plugin takes the projection off that gate: it reads the two files and
+ *   `mnemon:runtime-memory-protocol` text was present while the runtime-memory
+ *   snapshot was absent, so USER.md / MEMORY.md never reach the model at all.
+ *   This plugin took the projection off that gate: it reads the two files and
  *   registers them, nothing else.
+ *
+ * RETIRED 2026-10-01
+ *   The gate is on again (`lifecycleEnabled: true` with `idleReview.enabled: false`
+ *   in the web profile), so dsh-mnemon once more emits both the protocol text and
+ *   the runtime-memory snapshot. On the retirement day the system prompt carried
+ *   MNEMON RUNTIME MEMORY SNAPSHOT and the MNEMON VIEW TOOLS / AVAILABILITY lists
+ *   next to this section, i.e. the same two files twice. The bundle entry was
+ *   therefore dropped from `dsh.profile.bundles` in profiles/web/package.json; the
+ *   `dsh-hot-memory` dependency row stays, it is simply never registered. Source
+ *   kept on purpose: if mnemon regresses, putting the bundle entry back is the
+ *   whole revival step.
  *
  * COST MODEL
  *   A section's lazy text is re-rendered on every request; a CHANGED string is
@@ -21,11 +32,6 @@
  *   rides the cached prompt prefix at hit price (~4k tok -> about 0.0002 CNY per
  *   request), and only an actual memory write invalidates the prefix once.
  *
- * RETIRE CONDITION
- *   If dsh-mnemon's Composable Memory View is ever repaired (a real STRATEGY section
- *   and a MNEMON VIEW ROUTES envelope appear in the system prompt), this section
- *   duplicates its snapshot: disable the row in the profile patch and remove the
- *   bundle entry.
  */
 import { readFileSync } from "node:fs";
 import { homedir } from "node:os";

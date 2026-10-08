@@ -12,12 +12,14 @@
 | `dsh-literature-search` | literature_search 工具：OpenAlex 按被引排序 + arXiv 按相关度 |
 | `dsh-local-file-search` | @ 列表里的全机文件搜索，不进文件栏与工作区索引 |
 | `dsh-hot-memory` | 把 Mnemon 的 USER.md / MEMORY.md 投影进每个会话的 systemPrompt |
+| `dsh-guard` | 本机安全网：每个 step 前给改动文件留检查点、按 guard-hooks.json 自动跑校验钩子、工具调用进审计日志 |
 
 ## 版本线
 
 | 版本 | 对应 DSH | 说明 |
 |---|---|---|
-| `v0.1.2` | 0.1.7 | 本机 0.1.7 线继续开发的功能（本次同步） |
+| `v0.1.3` | 0.1.7 | 本次同步：右栏两轴分格、骨架与左右栏的这批改动 |
+| `v0.1.2` | 0.1.7 | 0.1.7 线的上一版 |
 | `v0.1.0` | 0.1.6 | 0.1.6 线的最后一版，保留可用、不再更新 |
 
 ## 装
@@ -36,10 +38,11 @@ dsh plugin --profile web add file:<本仓库>/dsh-wifi-access
 不克隆仓库、直接从 Release 装（一行一个包）：
 
 ```sh
-dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.2/dsh-wifi-access-0.1.0.tgz"
-dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.2/dsh-tool-literature-0.1.2.tgz"
-dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.2/dsh-local-file-search-0.1.2.tgz"
-dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.2/dsh-hot-memory-0.1.2.tgz"
+dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.3/dsh-wifi-access-0.1.0.tgz"
+dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.3/dsh-tool-literature-0.1.2.tgz"
+dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.3/dsh-local-file-search-0.1.2.tgz"
+dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.3/dsh-hot-memory-0.1.3.tgz"
+dsh plugin --profile web add "https://github.com/Ln1m/dsh-tool-suite/releases/download/v0.1.3/dsh-guard-0.1.0.tgz"
 ```
 
 装的时候若报 `UNABLE_TO_VERIFY_LEAF_SIGNATURE`（国内出口证书注入，Node 默认不读系统证书库），先执行 `$env:NODE_OPTIONS='--use-system-ca'` 再装。

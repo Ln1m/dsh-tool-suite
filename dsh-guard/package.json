@@ -1,7 +1,7 @@
 {
-    "name": "dsh-hot-memory",
-    "version": "0.1.3",
-    "description": "Project the Mnemon runtime memory files (USER.md / MEMORY.md) into every session's system prompt as one lazy section, independent of dsh-mnemon's lifecycle gate.",
+    "name": "dsh-guard",
+    "version": "0.1.0",
+    "description": "本机安全网：每个 step 前自动给改动文件留检查点（可一键回滚）、按 guard-hooks.json 自动跑校验钩子、把工具调用记进审计日志。",
     "type": "module",
     "main": "lib/index.js",
     "exports": {
@@ -27,9 +27,9 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Ln1m/dsh-tool-suite.git",
-        "directory": "dsh-hot-memory"
+        "directory": "dsh-guard"
     },
-    "homepage": "https://github.com/Ln1m/dsh-tool-suite/tree/main/dsh-hot-memory#readme",
+    "homepage": "https://github.com/Ln1m/dsh-tool-suite/tree/main/dsh-guard#readme",
     "bugs": {
         "url": "https://github.com/Ln1m/dsh-tool-suite/issues"
     }

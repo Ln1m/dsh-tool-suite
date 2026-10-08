@@ -1,0 +1,12 @@
+# dsh-guard：host-only 安全网（检查点 / 改动钩子 / 调用审计），无客户端半端。
+# 改动本文件或插件源码后需重启 DSH 才生效；钩子规则在 ~/.dsh/guard-hooks.json，改完即时生效。
+- insert:
+    - id: dsh-guard
+      name: 'dsh-guard'
+      config:
+        roots: []
+        scanIntervalSec: 20
+        keepPerSession: 40
+        maxTotalMB: 1024
+        auditLog: true
+        hooksEnabled: true
